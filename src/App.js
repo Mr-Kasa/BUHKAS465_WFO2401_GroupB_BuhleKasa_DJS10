@@ -1,13 +1,16 @@
 
 import './App.css';
+import ApiData from './components/apiData';
+
+
 
 
 function App() {
 
   return (
-    <div className="App">
-      
-    </div>
+    <>
+    <ApiData/>
+    </>
   );
 }
 
