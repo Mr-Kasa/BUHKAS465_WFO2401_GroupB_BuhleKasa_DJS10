@@ -6,7 +6,7 @@ export default function RenderToUI({ posts }) {
     if (post) {
       return (
         <div key={post.id} className="postCard">
-          <h2 className="postTitle">{post.title}</h2>
+          <h2 className="postTitle">{post.id}.  {post.title}</h2>
           <p className="postBody">{post.body}</p>
         </div>
       );
