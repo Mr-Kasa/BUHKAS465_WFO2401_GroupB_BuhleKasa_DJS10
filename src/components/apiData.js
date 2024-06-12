@@ -16,12 +16,11 @@ export default function ApiData() {
         const data = await res.json();
         console.log('API response:', data);
 
-        if (typeof data === 'object' && Object.keys(data).length > 0) {
-          const postsArray = Object.values(data); 
-          setPosts(postsArray);
+        if (Array.isArray(data) && data.length > 0) {
+          setPosts(data);
         } else {
-          setError('Invalid data format');
-          console.error('Posts data is not an object or empty:', data);
+          setError('Invalid data format or empty response');
+          console.error('Invalid data format or empty response:', data);
         }
       } catch (error) {
         setError(error.message);
